@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyFAST"
+
+description = "Suite of Python tools to work with OpenFAST"
+readme = "README.md"
+classifiers = [
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Testing",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+
+requires-python = ">=3.6"
+dependencies = [
+    "numpy>=1.15.2",
+    "pandas",
+    "matplotlib",
+    "chardet",
+    "scipy",
+    "sympy",
+    "openpyxl",
+    "pytest"
+]
+
+dynamic = ["version"]
+
+[project.urls]
+"Repository" = "https://github.com/openfast/python-toolbox/"
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[project.entry_points."pyFAST"]
+pyFAST = "pyFAST.__main__:main"
+
+[tools.pytest.ini_options]
+testpaths = ["tests"]
+
