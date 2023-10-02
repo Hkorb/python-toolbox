@@ -36,6 +36,9 @@ dynamic = ["version"]
 [tool.setuptools.dynamic]
 version = {file = "VERSION"}
 
+[tool.setuptools]
+packages = ["pyFAST"
+]
 [project.entry_points."pyFAST"]
 pyFAST = "pyFAST.__main__:main"
 
